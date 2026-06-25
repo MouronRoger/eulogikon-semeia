@@ -1,18 +1,25 @@
 {
   "posts": [
     {
+      "slug": "parakletos-by-your-side",
+      "title": "παράκλητος · paráklētos · the one called to your side",
+      "date": "2026-06-25",
+      "date_display": "25 June 2026",
+      "blurb": "81 attestations of παράκλητος in the Eulogikon corpus. Greek, transliterated and translated, with refs."
+    },
+    {
       "slug": "the-square-psyche",
-      "title": "The Square ψυχή",
+      "title": "τετράγωνος · tetrágōnos · the four-square man and the four-square ψυχή · psychē",
       "date": "2026-06-24",
       "date_display": "24 June 2026",
-      "blurb": "From Simonides to Proclus: how the image of the square man (τετράγωνος ἄνευ ψόγου) became the square soul. A corpus-grounded survey across six centuries, from Aristotle's εὐδαίμων through Aspasius's square stones to the Pythagorean tetrad of cognitive faculties."
+      "blurb": "Eleven passages on τετράγωνος in the Eulogikon corpus. Greek, transliterated and translated, with refs."
     },
     {
       "slug": "what-aristotle-means-by-socratic-induction",
-      "title": "What Aristotle attributes to Socrates, and what it means",
+      "title": "What Aristotle attributes to Socrates",
       "date": "2026-06-24",
       "date_display": "24 June 2026",
-      "blurb": "Aristotle credits Socrates with two things (inductive arguments and universal definition) and draws the single word (χωριστά) that separates Socrates from Plato. A close reading of <em>Metaphysics</em> 1078b17–31 with Alexander and the ancient commentators."
+      "blurb": "<em>Metaphysics</em> 1078b and related passages: ἐπαγωγή · epagōgḗ, ὁρισμός · horismós, χωριστά · chōristá. Greek, transliterated and translated, with refs."
     }
   ]
 }

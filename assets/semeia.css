@@ -27,6 +27,30 @@
     color: #2D3748;
     margin: 0 0 14px;
 }
+.semeia-essay .post-header h1[lang="grc"] {
+    margin-bottom: 0.15em;
+}
+.semeia-essay .post-header .translit {
+    margin: 0 0 0.35em;
+    text-align: center;
+}
+.semeia-essay .post-header .title-en {
+    font-weight: 300;
+    font-size: 1.35em;
+    line-height: 1.35;
+    color: #4a5568;
+    margin: 0 0 0.25em;
+}
+.semeia-essay .post-header .title-en-translit {
+    margin: 0 0 1em;
+    text-align: center;
+}
+.semeia-essay h2[lang="grc"] {
+    margin-bottom: 0.15em;
+}
+.semeia-essay h2[lang="grc"] + .translit {
+    margin: 0 0 0.9em;
+}
 .semeia-essay .post-meta {
     color: #718096;
     font-size: 0.92em;
@@ -61,6 +85,12 @@
     font-size: 1.12em;
     line-height: 1.8;
     color: #2D3748;
+}
+.semeia-essay .translit {
+    margin: 0 0 0.2em 1.1em;
+    color: #718096;
+    font-size: 0.94em;
+    letter-spacing: 0.01em;
 }
 .semeia-essay .translation {
     margin: 0 0 1.4em 1.1em;
