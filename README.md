@@ -63,13 +63,15 @@ visit the `.html` form locally in that case.)
 
 ## Deploy
 
+Production deploys **automatically on push to `main`**. The Cloudflare Pages
+project `eulogikon-semeia` is connected to this GitHub repo; custom domain
+`semeia.eulogikon.org` is already configured.
+
+To redeploy manually (rare):
+
 ```bash
 npx wrangler pages deploy . --project-name=eulogikon-semeia
 ```
-
-Then in the Cloudflare dashboard → Pages → `eulogikon-semeia` → **Custom domains**
-→ add `semeia.eulogikon.org`. The zone is already on Cloudflare, so the CNAME is
-provisioned automatically.
 
 ## Note on the chrome
 
