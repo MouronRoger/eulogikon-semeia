@@ -90,17 +90,47 @@
 
 .semeia-essay p { margin: 0 0 1.1em; }
 
+/* --- Witness frame: the station opener (author + work + ref + wid) ---
+   The witness name leads, larger and heavier; the work, reference, and wid
+   follow quietly. This is the single citation — it is not repeated below. */
+.semeia-essay .witness {
+    margin: 1.9em 0 0.3em;
+    line-height: 1.35;
+}
+.semeia-essay .witness-author {
+    font-size: 1.18em;
+    font-weight: 600;
+    color: var(--c-evidence);
+}
+.semeia-essay .witness-work {
+    font-style: italic;
+}
+.semeia-essay .witness-ref,
+.semeia-essay .witness .wid {
+    color: var(--c-sound);
+    font-size: 0.9em;
+}
+.semeia-essay .witness .wid {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+/* An optional note about what is on the page, under the witness line. */
+.semeia-essay .witness-note {
+    margin: 0 0 0.2em;
+    color: var(--c-sense);
+}
+
 /* --- Greek source quotations ---
-   The evidence: kept in its box, but sized into the scale so it no longer
-   dwarfs the apparatus beneath it. */
+   The evidence, brought down close to reading size so the eye moves easily
+   from it into the transliteration and translation beneath. */
 .semeia-essay blockquote.grc {
-    margin: 1.4em 0 0.5em;
-    padding: 0.55em 1.1em;
+    margin: 0.6em 0 0.5em;
+    padding: 0.5em 1.1em;
     border-left: 3px solid #cbd5e0;
     background: #f7fafc;
     border-radius: 0 4px 4px 0;
-    font-size: 1.05em;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.55;
     color: var(--c-evidence);
 }
 .semeia-essay p + p.translit,
@@ -218,6 +248,7 @@
     text-decoration: none;
     border-bottom: 1px solid transparent;
     font-variant-numeric: tabular-nums;
+    white-space: nowrap;
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 .semeia-essay table.summary a:hover {
