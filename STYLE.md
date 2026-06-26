@@ -65,7 +65,7 @@ State each once, without apology or drama, and move on.
 The writer is not silent. Some framing is not judgement but the condition of legibility, and the reader needs it:
 
 - **Who the author is and what kind of text this is.** "Demosthenes, addressing the jury." "The *Excerpts from Theodotus*, a Valentinian Gnostic text." "A testimonium preserved in Diogenes Laertius." The frame that lets the reader place the passage.
-- **The plain sense of a technical term.** "κρᾶσις, the blend of elemental powers — hot, cold, wet, dry." Telling the reader what a word means is not telling them what to conclude.
+- **The plain sense of a technical term.** "*Krasis*, the blend of elemental powers — hot, cold, wet, dry." Telling the reader what a word means is not telling them what to conclude.
 - **What is on the page, factually.** Where the word sits, what governs it, what it is paired with. Not *what it signifies* — what is *there*.
 
 The test: framing tells the reader what they are looking at. Editorialising tells the reader what to think about it. The first is the surveyor naming the station. The second is the surveyor telling you the view is beautiful.
@@ -78,9 +78,21 @@ No exceptions. A reader without Greek must be able to follow every mark.
 
 1. **The original Greek**, exactly as the corpus yields it, kept and never replaced.
 2. **A transliteration**, ALA-LC (the standard American romanisation: η → ē, ω → ō, θ → th, φ → ph, χ → ch, ψ → ps, ξ → x, rough breathing → h). παράκλητος → *paráklētos*; ψυχή → *psychē*; νόησις → *noēsis*.
-3. **An English translation.**
+3. **An English translation** — no quotation marks around the whole line. The three lines are parallel witness; wrapping only the English in quotes makes it look like reported speech when it is not. Use quotation marks inside the translation only where the Greek itself embeds a quotation (Origen quoting John, Demosthenes quoting a speaker).
 
 The Greek is the evidence; the transliteration lets the non-reader hear it; the translation lets them read it. All three, every time.
+
+---
+
+## Greek in English prose and translations
+
+No raw Greek script in English-running text. This applies to framing paragraphs, commentary, translation lines, table cells, and caveats — everywhere the reader is reading English.
+
+- **Translation lines** are English. No Greek script. Name a lemma by its transliteration (*paráklētos*) or by a plain-English gloss ("one called to the side"), not by untransliterated Greek.
+- **Framing and commentary** name Greek terms by ALA-LC transliteration in italics: *paráklētos*, *logismós*, *peithō*. Give a plain-English gloss where the reader needs one.
+- **Greek script belongs in blockquotes** (the evidence line) and in the post header (*h1*). Nowhere else in the body.
+
+A reader without Greek must never hit an untransliterated word mid-sentence. If they cannot read the script, they cannot read the sentence — which defeats the form.
 
 ---
 
@@ -104,9 +116,17 @@ The pieces published so far run longer in total because the apparatus is heavy. 
 
 Both the linked work title and the visible wid. The reader sees the identifier and can follow the link:
 
-> (Demosthenes, *On the Embassy*, Eulogikon: fsm-cc, ref. Or19 1)
+> Demosthenes, *On the Embassy*, Eulogikon: fsm-cc, ref. Or19 1
 
 The wid is the stable key. The reference (Or19 1, Metaph.1078b, Opif 165) locates the passage inside the work. Resolve the URL from the database; never hand-guess a slug.
+
+### One citation per witness
+
+Each Greek blockquote is one **witness**: one station in the corpus. It gets **one citation**, placed **above** the three lines (Greek, transliteration, translation), in `<p class="witness-ref">`. Optional framing prose may sit above that; commentary follows the translation.
+
+Do not repeat the reference in the framing prose and again after the translation. Do not bury the station identifier in a footnote-sized line below the evidence while duplicating it in the lead-in.
+
+Inline `<span class="cite">` is for secondary pointers only (parallel witnesses, cross-references, lexicographical glosses) — not for the primary witness block.
 
 ---
 
