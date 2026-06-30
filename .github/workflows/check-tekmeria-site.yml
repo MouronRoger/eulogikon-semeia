@@ -1,4 +1,4 @@
-name: Check Semeia site
+name: Check Tekmeria site
 
 on:
   push:
@@ -14,4 +14,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Verify posts manifest, index, and sitemap stay in sync
-        run: python scripts/sync_semeia_site.py --check
+        run: python scripts/sync_tekmeria_site.py --check

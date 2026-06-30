@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Keep Semeia index cards, JSON-LD ItemList, and sitemap in sync with posts.json."""
+"""Keep Tekmeria index cards, JSON-LD ItemList, and sitemap in sync with posts.json."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-SITE_BASE = "https://semeia.eulogikon.org"
+SITE_BASE = "https://tekmeria.eulogikon.org"
 ROOT = Path(__file__).resolve().parent.parent
 POSTS_FILE = ROOT / "posts.json"
 INDEX_FILE = ROOT / "index.html"
@@ -25,15 +25,15 @@ SKIP_HTML = frozenset({
     "parakletos-by-your-side.html",
 })
 
-POST_CARDS_START = "<!-- semeia:post-cards:start -->"
-POST_CARDS_END = "<!-- semeia:post-cards:end -->"
-LDJSON_START = "<!-- semeia:ld+json:start -->"
-LDJSON_END = "<!-- semeia:ld+json:end -->"
+POST_CARDS_START = "<!-- tekmeria:post-cards:start -->"
+POST_CARDS_END = "<!-- tekmeria:post-cards:end -->"
+LDJSON_START = "<!-- tekmeria:ld+json:start -->"
+LDJSON_END = "<!-- tekmeria:ld+json:end -->"
 
 
 @dataclass(frozen=True)
 class Post:
-    """One Semeia essay registered for index, sitemap, and JSON-LD."""
+    """One Tekmeria essay registered for index, sitemap, and JSON-LD."""
 
     slug: str
     title: str
@@ -148,7 +148,7 @@ def render_itemlist_object(posts: list[Post]) -> dict[str, Any]:
         "@context": "https://schema.org",
         "@type": "ItemList",
         "@id": f"{SITE_BASE}/#posts",
-        "name": "Semeia essays",
+        "name": "Tekmeria essays",
         "itemListOrder": "https://schema.org/ItemListOrderDescending",
         "numberOfItems": len(posts),
         "itemListElement": [
@@ -170,8 +170,8 @@ def render_index_ldjson(posts: list[Post]) -> str:
             "@context": "https://schema.org",
             "@type": "WebSite",
             "@id": f"{SITE_BASE}/#website",
-            "name": "Semeia",
-            "alternateName": "Σημεῖα",
+            "name": "Tekmeria",
+            "alternateName": "Τεκμήρια",
             "url": SITE_BASE,
             "description": (
                 "Short essays reading the ancient Greek corpus closely, with the "
@@ -195,8 +195,8 @@ def render_index_ldjson(posts: list[Post]) -> str:
             "@context": "https://schema.org",
             "@type": "Blog",
             "@id": f"{SITE_BASE}/#blog",
-            "name": "Semeia",
-            "alternateName": "Σημεῖα",
+            "name": "Tekmeria",
+            "alternateName": "Τεκμήρια",
             "url": SITE_BASE,
             "description": (
                 "Short essays reading the Eulogikon ancient Greek corpus closely: "
@@ -310,13 +310,13 @@ def run_sync(check_only: bool) -> int:
         if index_changed:
             print(
                 "error: index.html is out of sync with posts.json "
-                "(run: python scripts/sync_semeia_site.py)",
+                "(run: python scripts/sync_tekmeria_site.py)",
                 file=sys.stderr,
             )
         if sitemap_changed:
             print(
                 "error: sitemap.xml is out of sync with posts.json "
-                "(run: python scripts/sync_semeia_site.py)",
+                "(run: python scripts/sync_tekmeria_site.py)",
                 file=sys.stderr,
             )
         return 1
@@ -335,7 +335,7 @@ def run_sync(check_only: bool) -> int:
 def main() -> int:
     """CLI entry point."""
     parser = argparse.ArgumentParser(
-        description="Sync Semeia index cards, JSON-LD ItemList, and sitemap "
+        description="Sync Tekmeria index cards, JSON-LD ItemList, and sitemap "
         "from posts.json.",
     )
     parser.add_argument(

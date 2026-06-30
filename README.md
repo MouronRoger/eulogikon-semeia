@@ -1,9 +1,10 @@
-# Semeia · `semeia.eulogikon.org`
+# Tekmeria · `tekmeria.eulogikon.org`
 
-Σημεῖα ("signs, marks"): short essays that read the [Eulogikon](https://eulogikon.org)
-ancient-Greek corpus closely: the original text, its commentators, and what the
-words actually meant. A standalone static site, deliberately decoupled from the
-eulogikon corpus pipeline (no database, no generators, no build step).
+Τεκμήρια ("evidence tokens"): short essays that read the
+[Eulogikon](https://eulogikon.org) ancient-Greek corpus closely: the original
+text, its commentators, and what the words actually meant. A standalone static
+site, deliberately decoupled from the eulogikon corpus pipeline (no database,
+no generators, no build step).
 
 ## Style
 
@@ -12,8 +13,8 @@ dots (·) instead. Examples:
 
 | Instead of | Use |
 |---|---|
-| `Semeia — Eulogikon` | `Semeia · Eulogikon` |
-| `Semeia — Essays from…` | `Semeia: Essays from…` |
+| `Tekmeria — Eulogikon` | `Tekmeria · Eulogikon` |
+| `Tekmeria — Essays from…` | `Tekmeria: Essays from…` |
 | `two things — X — and Y` | `two things (X) and Y` |
 | `The question is — what…` | `The question is: what…` |
 | `earlier thinkers — the Pythagoreans — had` | `earlier thinkers (the Pythagoreans) had` |
@@ -23,16 +24,16 @@ En dashes (U+2013) in reference ranges (e.g. `1078b17–31`, `740–741`) are fi
 ## Layout
 
 ```
-semeia/
+tekmeria/
 ├── posts.json        # essay registry (single source of truth for index + sitemap)
 ├── scripts/
-│   └── sync_semeia_site.py   # sync/check index cards, ItemList, sitemap from posts.json
+│   └── sync_tekmeria_site.py   # sync/check index cards, ItemList, sitemap from posts.json
 ├── index.html        # landing page (post cards + ItemList generated from posts.json)
 ├── new-post.html     # blank skeleton: copy this to start a new essay
 ├── <post-name>.html  # one file per essay; the filename IS the URL (/<post-name>)
 └── assets/
     ├── eulogikon-base.css   # the main site's chrome + typography, lifted verbatim
-    └── semeia.css           # essay-specific styling (Greek quotes, citations, tables)
+    └── tekmeria.css           # essay-specific styling (Greek quotes, citations, tables)
 ```
 
 ## Add a post
@@ -55,11 +56,11 @@ semeia/
    blurb). Newest first in the array.
 5. **Sync derived files** (index post cards, JSON-LD `ItemList`, `sitemap.xml`):
    ```bash
-   python scripts/sync_semeia_site.py
+   python scripts/sync_tekmeria_site.py
    ```
 6. **Verify before commit** (also runs in GitHub Actions on every push/PR):
    ```bash
-   python scripts/sync_semeia_site.py --check
+   python scripts/sync_tekmeria_site.py --check
    ```
 
 The sync script reads `posts.json` as the single registry. It rewrites the
@@ -79,13 +80,13 @@ visit the `.html` form locally in that case.)
 ## Deploy
 
 Production deploys **automatically on push to `main`**. The Cloudflare Pages
-project `eulogikon-semeia` is connected to this GitHub repo; custom domain
-`semeia.eulogikon.org` is already configured.
+project `eulogikon-tekmeria` is connected to this GitHub repo; custom domain
+`tekmeria.eulogikon.org` is already configured.
 
 To redeploy manually (rare):
 
 ```bash
-npx wrangler pages deploy . --project-name=eulogikon-semeia
+npx wrangler pages deploy . --project-name=eulogikon-tekmeria
 ```
 
 ## Note on the chrome
